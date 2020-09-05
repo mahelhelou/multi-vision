@@ -2258,14 +2258,14 @@ p.articleP {
 }
 
 /** Portfolio */
-#portfolio img {
+#our-works img {
   width: 75%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-#portfolio h4 {
+#our-works h4 {
   margin-bottom: 35px;
   font-size: 18px;
   text-align: center;
@@ -2281,14 +2281,14 @@ p.articleP {
   }
 
   .location {
-     width: 80%;
-     margin-left: auto;
-     margin-right: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #myModal2-mail p,
   #myModal2-mail ul {
-      text-align: center;
+    text-align: center;
   }
 }
 
@@ -2329,6 +2329,28 @@ section {
   margin-bottom: 5px;
 }
 
-#portfolio-items h1 {
-  margin-bottom: 35px;
+/* Portfolio Page */
+.portfolio__page-title {
+  margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+  margin-top: 15px;
+}
+
+.portfolio__single-item-page h1 {
+  margin-bottom: 30px;
+}
+
+.portfolio__single-item-page p {
+  margin-bottom: 20px;
+}
+
+.portfolio__single-item-page .btn {
+  background: #691C32;
+}
+
+/** Font of all website */
+h1, h2, h3, h4, h5, h6, p, li, a, span {
+  font-family: 'Cairo', sans-serif !important;
 }

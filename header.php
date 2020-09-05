@@ -47,7 +47,7 @@
               <li class="scroll"><a href="#how-we-work">كيف نعمل</a></li>
               <li class="scroll"><a href="#services">خدماتنا</a></li>
               <li class="scroll"><a href="#team">فريق العمل</a></li>
-              <li class="scroll"><a href="#portfolio">أعمالنا</a></li>
+              <li class="scroll"><a href="#our-works">أعمالنا</a></li>
               <li class="scroll"><a href="#contact">اتصل بنا</a></li>
             </ul>
             <div class="btn button">

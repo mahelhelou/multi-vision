@@ -218,7 +218,7 @@ window.setTimeout(function() {
         <div class="col-md-6 " style="text-align: center;">
           <span>إنجازنا في ملتي فيجن طويل وخبرتنا بهذا الانجاز يزداد ، عندما تريد إنشاء مشروع ستحتاج لفريق يقدم لك
             الخدمة
-            و النُّصح والإرشاد وخبراته المتراكمة</span>
+            والنصيحة والإرشاد وخبراته المتراكمة</span>
         </div>
         <div class="col-md-3 "></div>
       </div>
@@ -283,7 +283,7 @@ window.setTimeout(function() {
                 <h4><a style="font-size: 20px;color: #c31313;font-weight: bold;">تطوير تطبيقات الجوال</a></h4>
                 <div class="col-md-12" id="aerrr" style="text-align: justify;line-height:20px;direction: rtl">
                   <h6>
-                    <p style="height: 130px">مبرمجينا متلكون الخبرة الكافية من أجل تحويل الفكرة الى واقع
+                    <p style="height: 130px">مبرمجينا يمتلكون الخبرة الكافية من أجل تحويل الفكرة الى واقع
                       عبر تطوير تطبيق احترافي يسهل الترويج لمشـــروعــــك وأعــمــالــك ويــلبـــــي احـــتيـــاجات
                       المستخدمين ويشكل حلقـة وصـــل بيــنك وبــين عمـــلائك</p>
                   </h6>
@@ -347,7 +347,7 @@ window.setTimeout(function() {
                 <div class="col-md-12" id="aerrr" style="text-align: justify;line-height:20px;direction: rtl">
                   <h6>
                     <p style="height: 130px">صناعة المحتوى التسويقي المتناسب مع خدمات ومنتجات وتوجهات الشركة نعمل على
-                      التسويق الرقمي الذي يبدأ من مواقع التواصل الاجتماعي مروراً بمحركات البحث، لضم ــــان تفاعل الجمهور
+                      التسويق الرقمي الذي يبدأ من مواقع التواصل الاجتماعي مروراً بمحركات البحث، لضمــان تفاعل الجمهور
                       من خلال تلك المواقـــع</p>
                   </h6>
                 </div>
@@ -393,7 +393,7 @@ window.setTimeout(function() {
         <?php
 						$args = array(
 							'post_type' => 'team',
-							'posts_per_page' => 10
+							'posts_per_page' => 12
 						);
 
 						$team = new WP_Query($args);
@@ -401,7 +401,7 @@ window.setTimeout(function() {
 						while ($team->have_posts()) {
 							$team->the_post(); ?>
 
-        <div class="col-md-3">
+        <div class="col-md-4">
           <img src="<?php echo get_field('team_member_avatar')['url']; ?>" alt="">
           <h4 class="text-center"><?php the_title(); ?></h4>
           <p class="text-center"><?php the_field('job_title'); ?></p>
@@ -415,7 +415,7 @@ window.setTimeout(function() {
     </div>
   </section><!-- team-end -->
   <!-- أعمالنا -->
-  <section id="portfolio">
+  <section id="our-works">
     <div class="container">
       <div class="row">
         <div class="bigTitle col-md-6 col-md-push-3" style="height: 89px;margin-top: 26px;">
@@ -439,19 +439,19 @@ window.setTimeout(function() {
           <!-- Portfolio -->
           <div class="row">
             <div class="col-md-4">
-              <a href="<?php echo site_url( '/conferences' ); ?>">
+              <a href="<?php echo get_post_type_archive_link( 'conference' ); ?>">
                 <img class="img-fluid" src="<?php echo get_template_directory_uri() . '/images/conferences-1.png'; ?>">
               </a>
               <h4>أعمالنا في تنظيم المعارض والمؤتمرات</h4>
             </div>
             <div class="col-md-4">
-              <a href="<?php echo site_url( '/apps' ); ?>">
+              <a href="<?php echo get_post_type_archive_link( 'app' ); ?>">
                 <img class="img-fluid" src="<?php echo get_template_directory_uri() . '/images/mobile-1.png'; ?>">
               </a>
               <h4>أعمالنا في تطوير التطبيقات</h4>
             </div>
             <div class="col-md-4">
-              <a href="<?php echo site_url( '/web-portfolio' ); ?>">
+              <a href="<?php echo get_post_type_archive_link( 'web' ); ?>">
                 <img width="150" src="<?php echo get_template_directory_uri() . '/images/web-design-1.png'; ?>">
               </a>
               <h4>أعمالنا في تطوير الويب</h4>
@@ -471,7 +471,7 @@ window.setTimeout(function() {
       <?php
 					$args = array(
 						'post_type' => 'partner',
-						'posts_per_page' => 12
+						'posts_per_page' => 24
 					);
 
 					$partner = new WP_Query($args);

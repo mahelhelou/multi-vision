@@ -14,7 +14,6 @@ function multivision_enqueue() {
   wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/css/swiper.min.css', array(), FALSE );
   wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/fontawesome-all.min.css', array(), FALSE );
   wp_enqueue_style( 'animate-css', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' );
-  wp_enqueue_style( 'ekko-lightbox-css', get_template_directory_uri() . '/css/ekko-lightbox.css', array(), FALSE );
   wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/css/style.css', array(), FALSE );
 
   // load js files
@@ -36,9 +35,25 @@ function multivision_enqueue() {
 add_action( 'init', 'multivision_post_types' );
 
 function multivision_post_types() {
-  // Apps & Web
+  // Conferences
+  register_post_type( 'conference', array(
+    'rewrite'   => array( 'slug' => 'conferences' ),
+  'supports'  => array( 'title' ),
+  'has_archive' => true,
+  'public'  => true,
+  'labels'  => array(
+     'name' => __( 'Conferences' ),
+     'add_new_item'   => __( 'Add New Conference' ),
+     'edit_item'      => __( 'Edit Conference' ),
+     'all_items'      => __( 'All Conferences' ),
+     'singular_name'  => __( 'Conference' )
+  ),
+  'menu_icon' => 'dashicons-screenoptions'
+  ) );
+
+  // Mobile apps
   register_post_type( 'app', array(
-    'rewrite'   => array( 'slug' => 'apps' ),
+    'rewrite'   => array( 'slug' => 'mobile-apps' ),
   'supports'  => array( 'title' ),
   'has_archive' => true,
   'public'  => true,
@@ -50,6 +65,22 @@ function multivision_post_types() {
      'singular_name'  => __( 'App' )
   ),
   'menu_icon' => 'dashicons-smartphone'
+  ) );
+
+  // Web apps
+  register_post_type( 'web', array(
+    'rewrite'   => array( 'slug' => 'web-apps' ),
+  'supports'  => array( 'title' ),
+  'has_archive' => true,
+  'public'  => true,
+  'labels'  => array(
+     'name' => __( 'Websites' ),
+     'add_new_item'   => __( 'Add New Website' ),
+     'edit_item'      => __( 'Edit Website' ),
+     'all_items'      => __( 'All Websites' ),
+     'singular_name'  => __( 'Website' )
+  ),
+  'menu_icon' => 'dashicons-desktop'
   ) );
 
   // Partners
@@ -79,5 +110,4 @@ function multivision_post_types() {
        ),
        'menu_icon' => 'dashicons-buddicons-buddypress-logo'
     ));
-
 }

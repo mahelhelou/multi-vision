@@ -22,7 +22,7 @@
               </div>
               <div>
                 <span class="footerIcon"><i class="fas fa-phone footer-contacts-icon"></i></span>
-                <p><span style="direction: ltr;"><a>CEO: +966 58 095 9995 <br> VP: 00966565500505</a></span></p>
+                <p><span style="direction: ltr;"><a>00966580959995 <br> 00966565500505</a></span></p>
               </div>
               <div>
                 <span class="footerIcon"><i class="fa fa-envelope footer-contacts-icon "></i> </span>
